@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dociphi</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .annotationBox {
+            position: absolute;
+            background-color: yellow;
+            opacity: 0.5;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="try_dociphi_container">
+        <div class="txtBtn-wrapper">
+            <div>
+                <h1 style="font-size: 1.5625rem;">Try Dociphi</h1>
+                <p style="font-size: 0.875rem; padding-right: inherit; margin-top: 1em; margin-bottom: 1em;">
+                    Experience how Dociphi enables you to derive
+                    insights from documents and make better decisions</p>
+            </div>
+            <div>
+                <h2 style="font-size: 0.875rem; font-weight: 600;">Try Dociphi now:
+                </h2>
+                <p style="font-size: 0.875rem; padding-right: inherit; margin-top: 1em; margin-bottom: 1em;">Use one of
+                    our samples from the below options to turn it into structured
+                    data.
+                </p>
+                <div class="buttonContainer" style="display: flex; gap: 0.5em 0.5rem; overflow: auto; flex-wrap: wrap;">
+                    <button type="button" class="try_dociphi_btn" screenType="DrivingLicence"><span class="">Driving
+                            License</span></button>
+
+                    <button type="button" class="try_dociphi_btn" screenType="passport"><span>Passport</span></button>
+                    <button type="button" class="try_dociphi_btn" screenType="bankStatement"><span>Bank
+                            Statement</span></button>
+                    <button type="button" class="try_dociphi_btn" screenType="payStubs"><span>Paystubs</span></button>
+                    <button type="button" class="try_dociphi_btn" screenType="resetScreen"><span><svg focusable="false"
+                                viewBox="0 0 24 24" fill=" rgb(39, 181, 133)">
+                                <path
+                                    d="M7.11 8.53L5.7 7.11C4.8 8.27 4.24 9.61 4.07 11h2.02c.14-.87.49-1.72 1.02-2.47zM6.09 13H4.07c.17 1.39.72 2.73 1.62 3.89l1.41-1.42c-.52-.75-.87-1.59-1.01-2.47zm1.01 5.32c1.16.9 2.51 1.44 3.9 1.61V17.9c-.87-.15-1.71-.49-2.46-1.03L7.1 18.32zM13 4.07V1L8.45 5.55 13 10V6.09c2.84.48 5 2.94 5 5.91s-2.16 5.43-5 5.91v2.02c3.95-.49 7-3.85 7-7.93s-3.05-7.44-7-7.93z">
+                                </path>
+                            </svg>Reset</span><span class="MuiTouchRipple-root"></span></button>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="screens">
+
+            <div class="blank-screen">
+                Select from our sample documents above to see how it works.
+
+            </div>
+
+            <div class="main-screen ">
+                <div class="left-section">
+                    <div style="position: relative;">
+                        <img src="" alt="">
+                        <div class="annotationBox"></div>
+                    </div>
+
+
+                </div>
+                <div class="right-section" style="max-height: 80vh; ">
+                    <div class="" style="border-radius: 2vh;">
+                        <div class="" style="border: 1px solid rgb(224, 224, 224); border-radius: 4px 4px 0px 0px;">
+                            <h3 class="table_header"
+                                style="padding: 1vh; display: flex; align-items: center; justify-content: space-between;">
+                                <div>Document Type: &nbsp;<span class="documentType"></span></div>
+                                <div>
+                                    <button class="openModal"><svg class="" focusable="false" viewBox="0 0 24 24"
+                                            aria-hidden="true" style="color: rgb(197, 199, 205);">
+                                            <path
+                                                d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z">
+                                            </path>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </h3>
+                        </div>
+                        <div class="extraction-box">
+
+                            <div class=""
+                                style="background: rgb(87, 95, 107); border-radius: 0px; display: flex; justify-content: center;">
+                                <h3 class="" style="color: white; font-family: Poppins; padding: 0.5vh;">No. of
+                                    Extraction: <span class="no_of_extraction"></span></h3>
+                            </div>
+                            <div class=""
+                                style="background: rgb(87, 95, 107); border-radius: 0px; display: flex; justify-content: center;">
+                                <h3 class="" style="color: white; font-family: Poppins; padding: 0.5vh;">Extraction
+                                    Score: <span class="extractionScore"></span></h3>
+                            </div>
+                        </div>
+                        <div class=""
+                            style="border-radius: 0px 0px 2vh 2vh;border: 1px solid rgb(224, 224,224); overflow: auto; max-height: 60vh;">
+                            <table style="width: 100%;" aria-label="a dense table">
+                                <thead class="sticky-table-head">
+                                    <tr class="">
+                                        <th scope="col" style="height: 1em;">Field</th>
+                                        <th scope="col" style="height: 1em;">Value</th>
+                                        <th scope="col" style="height: 1em;">Confidence</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="">
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- Image Modal -->
+    <div class="image-modal">
+        <img src="images/passport_dummy.jpg" alt="">
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>

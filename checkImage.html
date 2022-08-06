@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .container {
+            margin: 50px;
+            position: relative;
+            width: fit-content;
+            height: fit-content;
+        }
+
+
+        .annotationBox {
+            position: absolute;
+            background-color: yellow;
+            height: 20px;
+            width: 50px;
+            opacity: 0.3;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container">
+        <img src="images/passport_dummy.jpg" alt="">
+        <div class="annotationBox"></div>
+    </div>
+
+
+    <script>
+
+        let annotationBox = document.querySelector(".annotationBox");
+        // annotationBox.style.left = "147px";
+        annotationBox.style.left = "32.27%";
+
+        annotationBox.style.top = "66.3%";
+        annotationBox.style.width = "35.27%";
+        annotationBox.style.height = "3.47%";
+
+        [32.83, 62.8, 9.56, 3.9]
+
+
+    </script>
+
+</body>
+
+</html>
+
+
+
+360,322,172,306
+
+
+Fields: [
+{
+data: ["Code", "USA", 97],
+coords:[50.8,55.9,6.19,3.03]
+},
+{
+data: ["Passport No", "509345809", 97],
+coords:[70.73,56.18,16.5,3.47]
+},
+{
+data: ["Last Name", "ALFARO", 95],
+coords:[32.83,59,9.56,3.9]
+},
+{
+data: ["Name", "BLANCA MARIA", 96],
+coords:[32.83,62,18.38,3.03]
+},
+{
+data: ["Nationality", "UNITED STATES OF AMERICA", 96],
+coords:[32.27,66.3,35.27,3.47]
+},
+{
+data: ["Date Of Birth", "17 Dec 1979", 94],
+coords:[32.27,70.49,14,3.47]
+},
+{
+data: ["Gender", "F", 60],
+coords:[80.4,74.1,5.44,3.25]
+},
+{
+data: ["Date Of Expiration", "17 Nov 2023", 90],
+coords:[32.27,81.1,14.2,3.47]
+},
+],
+
+243,388,171,374
